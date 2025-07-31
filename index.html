@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa de Afiliados - Visan Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --visan-blue-dark: #004282;
+            --visan-blue-light: #00AEEF;
+            --background-color: #f7f8fa;
+            --text-color: #333333;
+            --heading-color: #004282;
+            --font-primaria: 'Montserrat', sans-serif;
+        }
+        body {
+            font-family: var(--font-primaria);
+            background-color: var(--background-color);
+            color: var(--text-color);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23e9ecef' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.99 7.5V30L0 22.5zM28 15L15 22.5V30L28 22.5z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .text-visan-dark { color: var(--visan-blue-dark); }
+        .bg-visan-dark { background-color: var(--visan-blue-dark); }
+        .border-visan-dark { border-color: var(--visan-blue-dark); }
+        .text-visan-light { color: var(--visan-blue-light); }
+        .bg-visan-light { background-color: var(--visan-blue-light); }
+        
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header class="py-4 px-4 sm:px-8 bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+             <img src="https://i.ibb.co/9v0Kq6b/logo.webp" alt="Logo Visan Médica" class="h-14" onerror="this.onerror=null;this.src='https://placehold.co/200x50/004282/FFFFFF?text=Visan+Online';">
+            <a href="form-afiliados.html" class="bg-visan-dark text-white font-bold py-2 px-6 rounded-md hover:bg-visan-light transition-colors">Seja um Afiliado</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-20 md:py-28 text-center fade-in bg-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-visan-dark">Transforme seus Contatos em Renda Extra.</h1>
+            <p class="max-w-3xl mx-auto text-lg md:text-xl mt-6 text-gray-600">Junte-se ao Programa de Afiliados da Visan Online e ganhe comissões indicando os melhores insumos e produtos de cardiologia do mercado.</p>
+            <a href="#como-funciona" class="mt-10 inline-block bg-visan-dark text-white font-bold py-4 px-10 rounded-md transition-transform duration-300 hover:scale-105 hover:bg-visan-light">Saiba Mais</a>
+        </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section id="como-funciona" class="py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-visan-dark">Uma Parceria <span class="text-visan-light">Simples e Vantajosa</span></h2>
+                <p class="max-w-2xl mx-auto text-lg mt-4 text-gray-600">Nosso programa foi desenhado para ser fácil de entender e rentável para você. Veja como funciona em 3 passos:</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="card p-8 rounded-xl fade-in" style="animation-delay: 0.2s;">
+                    <div class="mx-auto mb-6 bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center">
+                        <i data-lucide="user-plus" class="w-10 h-10 text-visan-dark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-visan-dark mb-2">1. Cadastre-se</h3>
+                    <p class="text-gray-600">Preencha nosso formulário de inscrição. O programa é ideal para profissionais com formação técnica na área da saúde, garantindo indicações de qualidade. Após a aprovação, você recebe seu cupom exclusivo.</p>
+                </div>
+                <div class="card p-8 rounded-xl fade-in" style="animation-delay: 0.4s;">
+                    <div class="mx-auto mb-6 bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center">
+                        <i data-lucide="share-2" class="w-10 h-10 text-visan-dark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-visan-dark mb-2">2. Divulgue seu Cupom</h3>
+                    <p class="text-gray-600">Compartilhe seu cupom com clínicas, médicos e hospitais. Cada vez que ele for usado, você e o cliente ganham.</p>
+                </div>
+                <div class="card p-8 rounded-xl fade-in" style="animation-delay: 0.6s;">
+                    <div class="mx-auto mb-6 bg-blue-100 w-20 h-20 rounded-full flex items-center justify-center">
+                        <i data-lucide="dollar-sign" class="w-10 h-10 text-visan-dark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-visan-dark mb-2">3. Receba sua Comissão</h3>
+                    <p class="text-gray-600">Você recebe 5% de comissão sobre o valor de cada venda qualificada. O pagamento é feito mensalmente, direto na sua conta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-visan-dark">Benefício Duplo: <br>Você Ganha, seu Cliente <span class="text-visan-light">Economiza.</span></h2>
+                    <p class="mt-6 text-gray-600">Nosso programa foi pensado para criar uma relação ganha-ganha. O seu cupom de afiliado é a chave para essa parceria de sucesso.</p>
+                </div>
+                <div class="space-y-6 fade-in" style="animation-delay: 0.2s;">
+                    <div class="card p-6 rounded-lg flex items-center gap-6">
+                        <i data-lucide="award" class="w-10 h-10 text-visan-dark flex-shrink-0"></i>
+                        <div>
+                            <h4 class="font-bold text-lg text-visan-dark">5% de Comissão para Você</h4>
+                            <p class="text-sm text-gray-600">Receba 5% do valor líquido de todas as vendas realizadas com o seu cupom.</p>
+                        </div>
+                    </div>
+                    <div class="card p-6 rounded-lg flex items-center gap-6">
+                        <i data-lucide="percent" class="w-10 h-10 text-visan-dark flex-shrink-0"></i>
+                        <div>
+                            <h4 class="font-bold text-lg text-visan-dark">2% de Desconto para seu Cliente</h4>
+                            <p class="text-sm text-gray-600">Seu indicado ganha 2% de desconto imediato na compra ao utilizar o seu cupom.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="inscricao" class="py-20 md:py-24 text-center bg-gray-800 text-white">
+        <div class="container mx-auto px-4 fade-in">
+            <i data-lucide="rocket" class="w-16 h-16 mx-auto text-visan-light mb-6"></i>
+            <h2 class="text-3xl md:text-4xl font-bold text-white">Pronto para Começar?</h2>
+            <p class="max-w-2xl mx-auto text-lg mt-6 text-gray-300">O cadastro é rápido e simples. Clique no botão abaixo para preencher o formulário de inscrição e dar o primeiro passo na sua jornada como nosso parceiro.</p>
+            <a href="form-afiliados.html" class="mt-10 inline-block bg-visan-light text-white font-bold py-4 px-10 rounded-md transition-transform duration-300 hover:scale-105 hover:bg-visan-dark">QUERO SER UM AFILIADO</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-10 pt-6 border-t border-gray-200 text-center text-sm text-gray-500">
+        <p>&copy; 2025 Visan Online. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
